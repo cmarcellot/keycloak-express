@@ -1,0 +1,14 @@
+{
+  "realm": "my-product",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "my-application",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "88K6fxnXkDfhMF3zdOrFJxSK1rkXVu0F"
+  },
+  "confidential-port": 0,
+  "policy-enforcer": {
+    "credentials": {}
+  }
+}

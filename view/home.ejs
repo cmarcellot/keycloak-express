@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Mon Projet Node - Page d'Accueil</title>
@@ -31,8 +32,26 @@
             color: #c0392b;
             font-weight: bold;
         }
+
+        /* Style pour les liens */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
+
 <body>
     <h1>Bienvenue sur la Page d'Accueil</h1>
 
@@ -42,6 +61,29 @@
                 <p>Bonjour, <%= user.name %> !</p>
                 <!-- Ajoutez d'autres informations sur l'utilisateur si nécessaire -->
             </div>
+            <ul>
+                <li>
+                    <!-- Liens lecture -->
+                    <span>LIRE :</span>
+                    <a href="/ue-1">UE-1</a>
+                    <a href="/ue-2">UE-2</a>
+                    <a href="/ue-3">UE-3</a>
+                </li>
+                <li>
+                    <!-- Liens écriture -->
+                    <span>Écrire :</span>
+                    <a href="/ue-1/update">UE-1</a>
+                    <a href="/ue-2/update">UE-2</a>
+                    <a href="/ue-3/update">UE-3</a>
+                </li>
+                <li>
+                    <!-- Liens validation -->
+                    <span>Valider :</span>
+                    <a href="/ue-1/validate">UE-1</a>
+                    <a href="/ue-2/validate">UE-2</a>
+                    <a href="/ue-3/validate">UE-3</a>
+                </li>
+            </ul>
         <% } else { %>
             <p>Veuillez vous connecter pour accéder au contenu.</p>
         <% } %>
@@ -52,4 +94,5 @@
         <p>Veuillez vous connecter pour accéder au contenu.</p>
     <% } %>
 </body>
+
 </html>

@@ -1,24 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Keycloak Example</title>
-	</head>
-	<body>
-		<h1>Home</h1>
-		<%
-		try {
-			if (user) {
-		%>
-				<p><%= user.name %></p>
-			<% } else { %>
-				<p>Please Login</p>
-			<% } %>
-		<%
-		} catch (e) {
-			console.error('Error: ', e);
-			%>
-				<p>Please Login</p>
-		<% } %>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>Mon Projet Node - Page d'Accueil</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .user-info {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .error-message {
+            color: #c0392b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur la Page d'Accueil</h1>
+
+    <% try { %>
+        <% if (user) { %>
+            <div class="user-info">
+                <p>Bonjour, <%= user.name %> !</p>
+                <!-- Ajoutez d'autres informations sur l'utilisateur si nécessaire -->
+            </div>
+        <% } else { %>
+            <p>Veuillez vous connecter pour accéder au contenu.</p>
+        <% } %>
+    <% } catch (e) { %>
+        <div class="error-message">
+            Une erreur s'est produite : <%= e.message %>
+        </div>
+        <p>Veuillez vous connecter pour accéder au contenu.</p>
+    <% } %>
+</body>
 </html>

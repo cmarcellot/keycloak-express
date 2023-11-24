@@ -5,7 +5,7 @@
   "resource": "application-note",
   "verify-token-audience": true,
   "credentials": {
-    "secret": "88K6fxnXkDfhMF3zdOrFJxSK1rkXVu0F"
+    "secret": "1PblQl9PW5g0zw0EIQNZCaZdsS1giucf"
   },
   "confidential-port": 0,
   "policy-enforcer": {

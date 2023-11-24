@@ -1,8 +1,8 @@
 {
-  "realm": "my-product",
+  "realm": "univ-notes",
   "auth-server-url": "http://localhost:8080/",
   "ssl-required": "external",
-  "resource": "my-application",
+  "resource": "application-note",
   "verify-token-audience": true,
   "credentials": {
     "secret": "88K6fxnXkDfhMF3zdOrFJxSK1rkXVu0F"

@@ -1,3 +1,4 @@
+<!-- home.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +50,18 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* Style pour le bouton de déconnexion */
+        .logout-button {
+            font-size: 16px;
+            padding: 5px 10px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -60,6 +73,8 @@
             <div class="user-info">
                 <p>Bonjour, <%= user.name %> !</p>
                 <!-- Ajoutez d'autres informations sur l'utilisateur si nécessaire -->
+                <!-- Bouton de déconnexion -->
+                <a href="/logout" class="logout-button">Se déconnecter</a>
             </div>
             <ul>
                 <li>

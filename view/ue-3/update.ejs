@@ -1,0 +1,59 @@
+<!-- ue-1/update.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Modifier les Notes de l'UE-3</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #555;
+            margin-right: 10px;
+        }
+
+        input {
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modifier les Notes de l'UE-3</h1>
+    <form action="/ue-1/update" method="post">
+        <label for="studentName">Nom de l'élève :</label>
+        <input type="text" id="studentName" name="studentName" required>
+        <br>
+        <label for="studentGrade">Nouvelle Note :</label>
+        <input type="text" id="studentGrade" name="studentGrade" required>
+        <br>
+        <button type="submit">Modifier la Note</button>
+    </form>
+</body>
+
+</html>

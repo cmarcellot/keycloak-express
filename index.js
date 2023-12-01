@@ -68,54 +68,63 @@ app.get('/login', keycloak.protect(), (req, res) => {
 app.get('/ue-1', keycloak.enforcer(['ue-1:lire'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue1');
     return res.status(200).end('success');
 });
 
 app.get('/ue-2', keycloak.enforcer(['ue-2:lire'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue2');
     return res.status(200).end('success');
 });
 
 app.get('/ue-3', keycloak.enforcer(['ue-3:lire'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue3');
     return res.status(200).end('success');
 });
 
 app.get('/ue-1/update', keycloak.enforcer(['ue-1:ecrire'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue-1/update');
     return res.status(200).end('success');
 });
 
 app.get('/ue-2/update', keycloak.enforcer(['ue-2:ecrire'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue-2/update');
     return res.status(200).end('success');
 });
 
 app.get('/ue-3/update', keycloak.enforcer(['ue-3:ecrire'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue-3/update');
     return res.status(200).end('success');
 });
 
 app.get('/ue-1/validate', keycloak.enforcer(['ue-1:valider'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue-1/validate');
     return res.status(200).end('success');
 });
 
 app.get('/ue-2/validate', keycloak.enforcer(['ue-2:valider'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue-2/validate');
     return res.status(200).end('success');
 });
 
 app.get('/ue-3/validate', keycloak.enforcer(['ue-3:valider'], {
     resource_server_id: 'application-note'
 }), (req, res) => {
+    res.render('ue-3/validate');
     return res.status(200).end('success');
 });
 
